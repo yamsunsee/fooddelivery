@@ -1,0 +1,20 @@
+{
+  "name": "fooddelivery",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "pug": "pug -w ./src/templates/index.pug -o ./",
+    "sass": "sass -w ./src/styles/scss/main.scss ./src/styles/css/main.min.css --style compressed"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Yamsunsee/FoodDelivery.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Yamsunsee/FoodDelivery/issues"
+  },
+  "homepage": "https://github.com/Yamsunsee/FoodDelivery#readme"
+}
