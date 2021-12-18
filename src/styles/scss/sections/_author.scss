@@ -1,0 +1,27 @@
+.author {
+  text-align: center;
+  padding: 2rem;
+  background-color: #f8f8f8;
+
+  a {
+    color: $red;
+    font-weight: 700;
+    margin-right: 0.3rem;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -0.2rem;
+      width: 0;
+      height: 0.2rem;
+      background-color: $red;
+      transition: ease-in-out 0.3s;
+    }
+
+    &:hover::before {
+      width: 100%;
+    }
+  }
+}

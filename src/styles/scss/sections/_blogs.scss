@@ -1,0 +1,86 @@
+.blogs {
+  margin-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  h3 {
+    font-size: rem(52);
+    max-width: rem(590);
+    margin-bottom: 1rem;
+  }
+
+  p {
+    color: $grey;
+    line-height: 1.5;
+    max-width: rem(420);
+  }
+
+  .content {
+    margin-top: 3rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+
+    &__item {
+      text-align: left;
+
+      &:nth-child(1) button {
+        background: linear-gradient(92.18deg, #3fda7d 48.17%, #00be4c 100%);
+
+        ion-icon {
+          color: $green;
+        }
+      }
+
+      &:nth-child(2) button {
+        background: linear-gradient(101.98deg, #ff6741 41.25%, #ff4415 98.64%);
+
+        ion-icon {
+          color: $red;
+        }
+      }
+
+      &:nth-child(3) button {
+        background: linear-gradient(101.98deg, #ffbc2d 41.25%, #feb618 98.64%);
+
+        ion-icon {
+          color: $yellow;
+        }
+      }
+
+      &--bottom {
+        padding: 2rem;
+
+        h4 {
+          font-size: rem(28);
+        }
+
+        p {
+          margin: 1rem auto;
+        }
+
+        button {
+          margin-top: 2rem;
+          border: none;
+          border-radius: 1rem;
+          padding: 1rem 2rem;
+          display: flex;
+          align-items: center;
+          color: #fff;
+          font-weight: 700;
+          font-size: 1.5rem;
+          cursor: pointer;
+
+          ion-icon {
+            background-color: #fff;
+            padding: 0.2rem;
+            border-radius: 0.3rem;
+            margin-left: 0.5rem;
+          }
+        }
+      }
+    }
+  }
+}

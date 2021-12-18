@@ -1,0 +1,102 @@
+.header {
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .nav {
+    display: flex;
+    gap: rem(40);
+    font-weight: 700;
+    text-transform: capitalize;
+    font-size: 1.2rem;
+
+    a {
+      color: $black;
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -0.2rem;
+        width: 0;
+        height: 0.2rem;
+        background-color: $red;
+        transition: ease-in-out 0.3s;
+      }
+
+      &:hover::before {
+        width: 100%;
+      }
+    }
+  }
+
+  .auth {
+    display: flex;
+    align-items: center;
+
+    .signup {
+      font-weight: 700;
+      text-transform: capitalize;
+      font-size: 1.2rem;
+      color: #fff;
+      background-color: $black;
+      border: solid 2px $black;
+      padding: 0.8rem 1rem;
+      border-radius: 0.5rem;
+      margin-right: 1rem;
+      transition: ease-in-out 0.3s;
+
+      &:hover {
+        color: $black;
+        background-color: #fff;
+      }
+    }
+
+    .basket {
+      width: 3rem;
+      height: 3rem;
+      background: linear-gradient(15deg, rgba(255, 68, 21, 1) 0%, rgba(255, 119, 21, 1) 100%);
+      padding: 0.2rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 0.5rem;
+      position: relative;
+
+      &:hover {
+        ion-icon {
+          animation: spin 0.5s ease-out forwards;
+
+          @keyframes spin {
+            from {
+              transform: rotateZ(0);
+            }
+
+            to {
+              transform: rotateZ(360deg);
+            }
+          }
+        }
+      }
+
+      &::before {
+        content: "";
+        width: 2em;
+        height: 2em;
+        background-color: #fff;
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      ion-icon {
+        font-size: 1.2rem;
+        color: $red;
+      }
+    }
+  }
+}

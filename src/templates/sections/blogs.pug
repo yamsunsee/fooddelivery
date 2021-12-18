@@ -1,0 +1,16 @@
+- blogItems = [{image: "10", title: "Riders"}, {image: "8", title: "Restaurants"}, {image: "6", title: "Community"}, ]
+
+.blogs 
+  h2 Near me
+  h3 Our regular updated new blogs.
+  p Best cooks and best delivery guys all at your service. Hot tasty food will reach you in 20mins.
+  .content
+    each item in blogItems
+      .content__item
+        img(srcset=`./src/images/image(${item.image}).png 2x`, alt="image")
+        .content__item--bottom
+          h4= item.title 
+          p We store the vast majority of the digital assets in secure...
+          button Aplly now
+            ion-icon(name="chevron-forward-outline")
+

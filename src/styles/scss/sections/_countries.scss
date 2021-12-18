@@ -1,0 +1,15 @@
+.countries {
+  margin-top: 5rem;
+  padding: 0 5rem;
+
+  h3 {
+    font-size: rem(34);
+    margin-bottom: 3rem;
+  }
+
+  .content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+  }
+}

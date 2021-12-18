@@ -1,0 +1,23 @@
+- infos = [{title: "Company", data: ["About", "Terms of Use", "Privacy Policy", "How it Works", "Cotact Us"]}, {title: "Get Help", data: ["Support Carrer", "24h Service", "Quick Chat"]}, {title: "Support", data: ["FAQ", "WhatsApp", "Policy"]}, {title: "Contact", data: ["Support 24", "Business"]}]
+
+.footer
+  .wrapper
+    .logo 
+      a(href="/") 
+        img(srcset="./src/images/logo.png 2x", alt="logo")
+      p Retail food delivery is a courier service in which a restaurant, store, or independent food-delivery
+      .links 
+        a(href="/") 
+          ion-icon(name="logo-facebook")
+        a(href="/") 
+          ion-icon(name="logo-twitter")
+        a(href="/") 
+          ion-icon(name="logo-linkedin")
+    .infos
+      each info in infos 
+        .info 
+          h3= info.title 
+          each item in info.data 
+            a(href="/")= item
+
+

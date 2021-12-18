@@ -1,0 +1,22 @@
+- menuItems = [{image: "18", title: "New York-Style pizza", des: "Lorem Ipsum Lorem Ipsum is simply and dummy text of the printing.", price: "7.10"}, {image: "17", title: "Bento Ekiben Makunchi...", des: "Ut enim ad minim veniam, quis nostrud exercitation.", price: "6.40"}, {image: "16", title: "Humburger Veggei...", des: "Lorem Ipsum Lorem Ipsum is simply and dummy text of the printing.", price: "4.80"}, {image: "15", title: "Indian Cusine Briyani Buffet", des: "Ut enim ad minim veniam, quis nostrud exercitation.", price: "5.10"}, {image: "14", title: "Chiken Tikka Buffalo Wing...", des: "Lorem Ipsum Lorem Ipsum is simply and dummy text of the printing.", price: "3.60"}, {image: "12", title: "Fsish Fry Shashik Freid Fish...", des: "Ut enim ad minim veniam, quis nostrud exercitation.", price: "6.40"}, ]
+
+.menu
+  h2 Popular Menu 
+  h3 Wait a minute for delicious.
+  .menu__content
+    each item in menuItems
+      .menu__item
+        .image
+          img(src=`./src/images/image(${item.image}).png`, alt="image")
+        .stars
+          each i in Array(5)
+            ion-icon(name="star")
+        h4= item.title 
+        p= item.des 
+        span= `$${item.price}`
+        .links
+          ion-icon(name="heart")
+          ion-icon(name="share-social")
+  button See All Menu 
+    ion-icon(name="chevron-forward-outline")      
+

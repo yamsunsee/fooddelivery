@@ -1,0 +1,85 @@
+.slider {
+  .top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    h3 {
+      display: flex;
+      font-size: 2rem;
+
+      ion-icon {
+        margin-left: 0.2rem;
+        color: $red;
+      }
+    }
+
+    .button {
+      ion-icon:first-child {
+        margin-right: 1rem;
+      }
+
+      ion-icon {
+        color: $grey;
+        background-color: #3333;
+        padding: 0.5rem;
+        border-radius: 0.5rem;
+        transition: ease-in-out 0.3s;
+        cursor: pointer;
+
+        &:hover {
+          color: #fff;
+          background-color: $black;
+        }
+      }
+    }
+  }
+
+  .bottom {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+
+    .dish {
+      background-color: #eee;
+      padding: 1rem;
+      border-radius: 1rem;
+      display: flex;
+      transition: ease-in-out 0.3s;
+      cursor: pointer;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+
+      .content {
+        h4 {
+          font-size: 1.5rem;
+        }
+
+        p {
+          color: $grey;
+          margin-top: 1rem;
+        }
+
+        h5 {
+          color: $red;
+          font-size: 1.5rem;
+        }
+      }
+
+      .image {
+        min-width: 8rem;
+        position: relative;
+
+        img {
+          max-height: 10rem;
+          position: absolute;
+          top: -30%;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+      }
+    }
+  }
+}

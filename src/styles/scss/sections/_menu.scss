@@ -1,0 +1,116 @@
+.menu {
+  margin-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  h3 {
+    font-size: rem(52);
+    max-width: rem(590);
+  }
+
+  &__content {
+    margin-top: 3rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  &__item {
+    text-align: left;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    position: relative;
+
+    .image {
+      display: flex;
+      justify-content: center;
+
+      img {
+        max-height: rem(200);
+      }
+    }
+
+    .stars {
+      color: $yellow;
+    }
+
+    h4 {
+      font-size: rem(20);
+      font-weight: 700;
+      margin: 0.5rem auto;
+    }
+
+    p {
+      color: $grey;
+      line-height: 1.5;
+      margin-bottom: 1rem;
+    }
+
+    span {
+      font-size: rem(20);
+      font-weight: 700;
+    }
+
+    .links {
+      position: absolute;
+      right: 1rem;
+      bottom: 1rem;
+
+      ion-icon {
+        font-size: 1.5rem;
+        padding: 0.5rem;
+        border-radius: 0.5rem;
+        color: #fff;
+        cursor: pointer;
+        transition: ease-in-out 0.3s;
+
+        &:first-child {
+          background-color: $red;
+          border: solid 2px $red;
+          margin-right: 0.5rem;
+
+          &:hover {
+            color: $red;
+            background-color: #fff;
+          }
+        }
+
+        &:last-child {
+          background-color: $black;
+          border: solid 2px $black;
+
+          &:hover {
+            color: $black;
+            background-color: #fff;
+          }
+        }
+      }
+    }
+  }
+
+  button {
+    margin-top: 2rem;
+    border: none;
+    background: linear-gradient(92.18deg, #3fda7d 48.17%, #00be4c 100%);
+    border-radius: 1rem;
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.5rem;
+    cursor: pointer;
+
+    ion-icon {
+      background-color: #fff;
+      padding: 0.2rem;
+      border-radius: 0.3rem;
+      color: $green;
+      margin-left: 0.5rem;
+    }
+  }
+}

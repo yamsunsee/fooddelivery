@@ -1,0 +1,76 @@
+.map {
+  margin-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  & > h3 {
+    font-size: rem(52);
+    max-width: rem(520);
+  }
+
+  .content {
+    width: 100%;
+    margin-top: 3rem;
+    display: flex;
+
+    &__left {
+      max-height: 100%;
+      flex-grow: 1;
+      text-align: left;
+      margin-right: 5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+    }
+
+    &__header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      h4 {
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+      }
+
+      p {
+        color: $grey;
+      }
+
+      img {
+        max-width: rem(94);
+      }
+    }
+
+    &__item {
+      padding-right: rem(33);
+
+      h4 {
+        color: $green;
+        letter-spacing: 0.5rem;
+      }
+
+      h3 {
+        font-size: rem(28);
+        color: $grey;
+        margin: 0.5rem auto 2rem;
+      }
+
+      p {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        font-weight: 700;
+        padding-bottom: 1rem;
+        border-bottom: solid 1px #3333;
+
+        ion-icon {
+          color: $red;
+          font-size: 2rem;
+        }
+      }
+    }
+  }
+}

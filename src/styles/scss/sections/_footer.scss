@@ -1,0 +1,86 @@
+.footer {
+  background-color: #f8f8f8;
+  margin-top: 5rem;
+
+  .wrapper {
+    padding: 3rem 0;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 5rem;
+    border-bottom: solid 1px #3333;
+  }
+
+  .logo {
+    p {
+      color: $grey;
+      line-height: 1.5;
+      margin: 1rem auto;
+    }
+
+    .links {
+      a {
+        &:hover ion-icon {
+          animation: jump 0.9s ease-out infinite;
+
+          @keyframes jump {
+            25% {
+              transform: translateY(-0.5rem) rotateZ(-30deg);
+              animation-timing-function: ease-in;
+            }
+
+            50% {
+              transform: translateY(0rem) rotateZ(0deg);
+              animation-timing-function: ease-out;
+            }
+
+            75% {
+              transform: translateY(-0.5rem) rotateZ(30deg);
+              animation-timing-function: ease-in;
+            }
+          }
+        }
+
+        &:not(:last-child) {
+          margin-right: 1rem;
+        }
+
+        ion-icon {
+          color: $black;
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+
+  .infos {
+    display: flex;
+    justify-content: space-between;
+
+    .info {
+      display: flex;
+      flex-direction: column;
+
+      a {
+        margin-top: 1rem;
+        color: $grey;
+        position: relative;
+        width: fit-content;
+
+        &::before {
+          content: "";
+          position: absolute;
+          left: 0;
+          bottom: -0.2rem;
+          width: 0;
+          height: 0.2rem;
+          background-color: $grey;
+          transition: ease-in-out 0.3s;
+        }
+
+        &:hover::before {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

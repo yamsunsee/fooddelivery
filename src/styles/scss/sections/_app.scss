@@ -1,0 +1,42 @@
+.app {
+  margin-top: 5rem;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+
+  .content {
+    h3 {
+      font-size: rem(34);
+    }
+
+    p {
+      color: $grey;
+      line-height: 1.5;
+      max-width: rem(350);
+      margin: 1rem 0;
+    }
+
+    .links {
+      display: flex;
+
+      :first-child {
+        margin-right: 1rem;
+      }
+
+      a.link {
+        color: $black;
+        display: flex;
+        align-items: center;
+        padding: 0.5rem 1rem;
+        border-radius: 0.5rem;
+
+        ion-icon {
+          margin-right: 1rem;
+        }
+
+        font-size: 1.5rem;
+        border: solid 2px #3333;
+      }
+    }
+  }
+}
