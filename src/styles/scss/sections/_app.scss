@@ -29,13 +29,28 @@
         align-items: center;
         padding: 0.5rem 1rem;
         border-radius: 0.5rem;
+        font-size: 1.5rem;
+        border: solid 2px #3333;
+        transition: ease-in-out 0.3s;
 
         ion-icon {
           margin-right: 1rem;
         }
 
-        font-size: 1.5rem;
-        border: solid 2px #3333;
+        &:hover {
+          border-color: $black;
+
+          & > ion-icon {
+            perspective: 100rem;
+            animation: spin-y 0.5s ease-out forwards;
+
+            @keyframes spin-y {
+              to {
+                transform: rotateY(360deg);
+              }
+            }
+          }
+        }
       }
     }
   }

@@ -79,6 +79,20 @@
             border-radius: 0.3rem;
             margin-left: 0.5rem;
           }
+
+          &:hover > ion-icon {
+            animation: spin 0.5s ease-out forwards;
+
+            @keyframes spin {
+              50% {
+                border-radius: 50%;
+              }
+
+              to {
+                transform: rotateZ(360deg);
+              }
+            }
+          }
         }
       }
     }
