@@ -3,21 +3,21 @@
 .footer
   .wrapper
     .logo 
-      a(href="/") 
+      a(href="#") 
         img(srcset="./src/images/logo.png 2x", alt="logo")
       p Retail food delivery is a courier service in which a restaurant, store, or independent food-delivery
       .links 
-        a(href="/") 
+        a(href="#") 
           ion-icon(name="logo-facebook")
-        a(href="/") 
+        a(href="#") 
           ion-icon(name="logo-twitter")
-        a(href="/") 
+        a(href="#") 
           ion-icon(name="logo-linkedin")
     .infos
       each info in infos 
         .info 
           h3= info.title 
           each item in info.data 
-            a(href="/")= item
+            a(href="#")= item
 
 

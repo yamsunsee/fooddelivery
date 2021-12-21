@@ -5,6 +5,7 @@
   flex-wrap: wrap;
   padding: 2rem;
   background-color: #f8f8f8;
+  line-height: 1.5;
 
   a {
     color: $red;
@@ -39,7 +40,7 @@
       content: "";
       position: absolute;
       left: 0;
-      bottom: -0.2rem;
+      bottom: 0rem;
       width: 0;
       height: 2px;
       background-color: $red;
