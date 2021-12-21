@@ -4,6 +4,10 @@
   align-items: center;
   justify-content: space-between;
 
+  #menu {
+    display: none;
+  }
+
   .nav {
     display: flex;
     gap: rem(40);
@@ -11,9 +15,14 @@
     text-transform: capitalize;
     font-size: 1.2rem;
 
+    ion-icon[name="close"] {
+      display: none;
+    }
+
     a {
       color: $black;
       position: relative;
+      width: fit-content;
 
       &::before {
         content: "";
@@ -21,7 +30,7 @@
         left: 0;
         bottom: -0.2rem;
         width: 0;
-        height: 0.2rem;
+        height: 4px;
         background-color: $red;
         transition: ease-in-out 0.3s;
       }
@@ -51,6 +60,52 @@
       &:hover {
         color: $black;
         background-color: #fff;
+      }
+    }
+
+    .signup__button {
+      width: 3rem;
+      height: 3rem;
+      background: linear-gradient(15deg, $black 0%, rgb(99, 99, 99) 100%);
+      padding: 0.2rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 0.5rem;
+      margin-right: 1rem;
+      position: relative;
+
+      &:hover {
+        ion-icon {
+          animation: spin 0.5s ease-out forwards;
+
+          @keyframes spin {
+            from {
+              transform: rotateZ(0);
+            }
+
+            to {
+              transform: rotateZ(360deg);
+            }
+          }
+        }
+      }
+
+      &::before {
+        content: "";
+        width: 2em;
+        height: 2em;
+        background-color: #fff;
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      ion-icon {
+        font-size: 1.5rem;
+        color: #222;
       }
     }
 
@@ -96,6 +151,186 @@
       ion-icon {
         font-size: 1.2rem;
         color: $red;
+      }
+    }
+  }
+}
+
+@include extra-large {
+  .header {
+    .auth {
+      .signup__button {
+        display: none;
+      }
+    }
+  }
+}
+
+@include large {
+  .header {
+    .nav {
+      gap: 1.5rem;
+    }
+
+    .auth {
+      .signup__button {
+        display: none;
+      }
+    }
+  }
+}
+
+@include medium {
+  .header {
+    #menu {
+      display: block;
+      font-size: 2rem;
+      padding-right: 5rem;
+    }
+
+    .nav {
+      z-index: 100;
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: -100%;
+      right: 100%;
+      background-image: linear-gradient(to right, $black, #3339);
+      flex-direction: column;
+      padding: 5rem;
+      transition: ease-out 0.5s;
+
+      &.show {
+        left: 0;
+        right: 0;
+      }
+
+      ion-icon[name="close"] {
+        display: block;
+        color: #fff;
+        font-size: 3rem;
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+      }
+
+      a {
+        color: #fff;
+        font-size: 2rem;
+        text-transform: uppercase;
+      }
+    }
+
+    .signup {
+      display: none;
+    }
+  }
+}
+
+@include small {
+  .header {
+    #menu {
+      display: block;
+      font-size: 2rem;
+    }
+
+    .nav {
+      z-index: 100;
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: -100%;
+      right: 100%;
+      background-image: linear-gradient(to right, $black, #3339);
+      flex-direction: column;
+      padding: 5rem;
+      transition: ease-out 0.5s;
+
+      &.show {
+        left: 0;
+        right: 0;
+      }
+
+      ion-icon[name="close"] {
+        display: block;
+        color: #fff;
+        font-size: 3rem;
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+      }
+
+      a {
+        color: #fff;
+        font-size: 2rem;
+        text-transform: uppercase;
+      }
+    }
+
+    .signup {
+      display: none;
+    }
+  }
+}
+
+@include extra-small {
+  .header {
+    #menu {
+      display: block;
+      font-size: 1.5rem;
+    }
+
+    a.logo img {
+      max-width: 10rem;
+    }
+
+    .nav {
+      z-index: 100;
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: -100%;
+      right: 100%;
+      background-image: linear-gradient(to right, $black, #3339);
+      flex-direction: column;
+      padding: 5rem;
+      transition: ease-out 0.5s;
+
+      &.show {
+        left: 0;
+        right: 0;
+      }
+
+      ion-icon[name="close"] {
+        display: block;
+        color: #fff;
+        font-size: 2rem;
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+      }
+
+      a {
+        color: #fff;
+        font-size: 1.5rem;
+        text-transform: uppercase;
+      }
+    }
+
+    .auth {
+      .signup {
+        display: none;
+      }
+
+      .signup__button {
+        margin-right: 0.5rem;
+      }
+
+      .basket,
+      .signup__button {
+        width: 2.5rem;
+        height: 2.5rem;
+        border-radius: 50%;
       }
     }
   }

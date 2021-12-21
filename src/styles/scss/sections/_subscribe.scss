@@ -6,7 +6,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-image: linear-gradient(120deg, $red 50%, $yellow 50%);
+    background-image: linear-gradient(120deg, $red 40%, $yellow 60%);
     border-radius: 2rem;
     min-height: rem(240);
 
@@ -72,6 +72,98 @@
               transform: rotateZ(360deg);
             }
           }
+        }
+      }
+    }
+  }
+}
+
+@include large {
+  .subscribe {
+    .banner {
+      &__input {
+        input {
+          width: 20rem;
+        }
+      }
+    }
+  }
+}
+
+@include medium {
+  .subscribe {
+    .banner {
+      background-image: linear-gradient(-15deg, $yellow 40%, $red 60%);
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 2rem;
+
+      &__content {
+        margin-bottom: 3rem;
+
+        p {
+          max-width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@include small {
+  .subscribe {
+    .banner {
+      background-image: linear-gradient(-15deg, $yellow 40%, $red 60%);
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 2rem;
+
+      &__content {
+        margin-bottom: 3rem;
+
+        p {
+          max-width: 100%;
+        }
+      }
+
+      &__input {
+        input {
+          width: 15rem;
+        }
+      }
+    }
+  }
+}
+
+@include extra-small {
+  .subscribe {
+    .banner {
+      background-image: linear-gradient(-15deg, $yellow 40%, $red 60%);
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 2rem;
+
+      &__content {
+        margin-bottom: 3rem;
+
+        p {
+          max-width: 100%;
+        }
+      }
+
+      &__input {
+        flex-direction: column;
+
+        input {
+          width: 15rem;
+          border-radius: 0.5rem;
+        }
+
+        button {
+          width: fit-content;
+          border-radius: 0.5rem;
+          padding: 0.8rem 1.5rem;
+          align-self: center;
+          margin-top: 1rem;
         }
       }
     }

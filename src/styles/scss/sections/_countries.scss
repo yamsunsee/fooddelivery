@@ -13,3 +13,31 @@
     gap: 1rem;
   }
 }
+
+@include medium {
+  .countries {
+    .content {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+}
+
+@include small {
+  .countries {
+    padding: 0;
+
+    .content {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+}
+
+@include extra-small {
+  .countries {
+    padding: 0;
+
+    .content {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+}

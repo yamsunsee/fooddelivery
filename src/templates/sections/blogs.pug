@@ -9,8 +9,9 @@
       .content__item
         img(srcset=`./src/images/image(${item.image}).png 2x`, alt="image")
         .content__item--bottom
-          h4= item.title 
-          p We store the vast majority of the digital assets in secure...
+          div
+            h4= item.title 
+            p We store the vast majority of the digital assets in secure...
           button Aplly now
             ion-icon(name="chevron-forward-outline")
 

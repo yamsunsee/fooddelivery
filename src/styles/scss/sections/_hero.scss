@@ -6,12 +6,15 @@
   position: relative;
 
   .content {
-    max-width: 40%;
+    max-width: 30rem;
     height: rem(470);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    background-image: linear-gradient(to right, #fff 25%, #fff9);
     z-index: 1;
+    padding: 1rem 0;
+    border-radius: 0 1rem 1rem 0;
 
     h1 {
       font-weight: 700;
@@ -23,7 +26,6 @@
       position: relative;
 
       input {
-        flex: 1;
         border: solid 1px #3fda7d;
         border-radius: 0.5rem 0 0 0.5rem;
         padding: 1rem 2rem 1rem 3rem;
@@ -93,7 +95,7 @@
           right: 0;
           bottom: -0.2rem;
           width: 0;
-          height: 0.2rem;
+          height: 2px;
           background-color: $red;
           transition: ease-in-out 0.3s;
         }
@@ -109,11 +111,92 @@
     max-height: inherit;
     position: absolute;
     top: 50%;
-    right: -5rem;
+    right: -6rem;
     transform: translateY(-50%);
 
     img {
       max-height: inherit;
+    }
+  }
+}
+
+@include small {
+  .hero {
+    .content {
+      padding: 2rem;
+      border-radius: 1rem;
+
+      h1 {
+        font-size: 3rem;
+      }
+    }
+
+    .location {
+      flex-direction: column;
+
+      input {
+        border-radius: 0.5rem !important;
+        margin-bottom: 1rem;
+      }
+
+      button {
+        border-radius: 0.5rem !important;
+        justify-content: space-between;
+        padding: 1rem 2rem !important;
+        width: fit-content;
+        align-self: center;
+      }
+
+      & > ion-icon {
+        top: 1.75rem !important;
+      }
+    }
+  }
+}
+
+@include extra-small {
+  .hero {
+    margin-top: 3rem;
+
+    .content {
+      padding: 1rem;
+      border-radius: 1rem;
+
+      h2 {
+        font-size: 1.5rem;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      p {
+        font-size: 0.8rem;
+      }
+    }
+
+    .location {
+      flex-direction: column;
+
+      input {
+        border-radius: 0.5rem !important;
+        margin-bottom: 1rem;
+        padding: 1rem !important;
+        font-size: 0.8rem !important;
+      }
+
+      button {
+        border-radius: 0.5rem !important;
+        justify-content: space-between;
+        padding: 0.7rem 1rem !important;
+        font-size: 1rem !important;
+        width: fit-content;
+        align-self: center;
+      }
+
+      & > ion-icon {
+        display: none;
+      }
     }
   }
 }

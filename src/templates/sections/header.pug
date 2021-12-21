@@ -1,4 +1,6 @@
 .header
+  #menu
+    ion-icon(name="menu")
   a(href="/").logo
     img(src="./src/images/logo.png", alt="logo")
   .nav
@@ -6,7 +8,10 @@
     a(href="/") review
     a(href="/") about us
     a(href="/") contact us
+    ion-icon(name="close")
   .auth 
     a(href="/").signup sign up 
+    a(href="/").signup__button
+      ion-icon(name="person-circle")
     a(href="/").basket 
       ion-icon(name="bag-handle")

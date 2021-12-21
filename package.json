@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/Yamsunsee/FoodDelivery/issues"
   },
-  "homepage": "https://github.com/Yamsunsee/FoodDelivery#readme"
+  "homepage": "https://github.com/Yamsunsee/FoodDelivery#readme",
+  "devDependencies": {
+    "smooth-scrollbar": "^8.7.0"
+  }
 }

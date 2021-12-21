@@ -55,3 +55,65 @@
     }
   }
 }
+
+@include medium {
+  .app {
+    .links {
+      flex-direction: column;
+
+      .link {
+        width: fit-content;
+        align-self: center;
+
+        &:first-child {
+          margin-bottom: 1rem;
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}
+
+@include small {
+  .app {
+    flex-direction: column;
+
+    img {
+      order: 2;
+    }
+
+    .content {
+      order: 1;
+      margin-bottom: 3rem;
+    }
+  }
+}
+
+@include extra-small {
+  .app {
+    flex-direction: column;
+
+    img {
+      order: 2;
+    }
+
+    .content {
+      order: 1;
+      margin-bottom: 3rem;
+
+      .links {
+        flex-direction: column;
+
+        .link {
+          width: fit-content;
+          align-self: center;
+
+          &:first-child {
+            margin-bottom: 1rem;
+            margin-right: 0;
+          }
+        }
+      }
+    }
+  }
+}

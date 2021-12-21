@@ -72,7 +72,7 @@
           left: 0;
           bottom: -0.2rem;
           width: 0;
-          height: 0.2rem;
+          height: 2px;
           background-color: $grey;
           transition: ease-in-out 0.3s;
         }
@@ -80,6 +80,38 @@
         &:hover::before {
           width: 100%;
         }
+      }
+    }
+  }
+}
+
+@include medium {
+  .footer {
+    .wrapper {
+      gap: 2rem;
+    }
+  }
+}
+
+@include small {
+  .footer {
+    .wrapper {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+  }
+}
+
+@include extra-small {
+  .footer {
+    .wrapper {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+
+      .infos {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
       }
     }
   }
